@@ -16,7 +16,7 @@ node {
             pkill -9 -f ${jar_name}
             echo "stop application"
         fi
-        BUILD_ID=DONTKILLME nohup java -jar ${jar_name} &
+        JENKINS_NODE_COOKIE=DONTKILLME nohup java -jar ${jar_name} &
         """
     }
 }
