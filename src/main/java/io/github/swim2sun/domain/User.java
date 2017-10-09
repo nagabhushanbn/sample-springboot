@@ -1,4 +1,4 @@
-package com.pig84.domain;
+package io.github.swim2sun.domain;
 
 public class User {
     private String name;

@@ -1,6 +1,6 @@
-package com.pig84.web;
+package io.github.swim2sun.web;
 
-import com.pig84.domain.User;
+import io.github.swim2sun.domain.User;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
@@ -10,7 +10,7 @@ public class UserController {
 
     @RequestMapping("/find")
     public User find() {
-        return new User("Milo","Milo.you@pig84.com");
+        return new User("Milo","foobar@gmail.com");
     }
 
 }
