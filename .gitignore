@@ -1,0 +1,16 @@
+# Created by .ignore support plugin (hsz.mobi)
+### pig84 template
+.gradle
+bin
+build
+gen
+.project
+.classpath
+.settings
+.DS_Store
+local.properties
+*.iml
+.idea
+log
+*.iws
+*.ipr
