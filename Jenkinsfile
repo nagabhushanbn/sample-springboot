@@ -6,9 +6,10 @@ node {
         archiveArtifacts artifacts: 'build/libs/*.jar', fingerprint: true
     }
 
+
     stage('Deploy') {
+        def jar_name = "demo-1.0.jar"
         sh """
-        jar_name=demo-1.0.jar
         cp ${env.WORKSPACE}/build/libs/${jar_name} ~/servers
         cd ~/servers
         if [ \$(pgrep -f ${jar_name} | wc -l) -gt 0 ]; then
