@@ -8,9 +8,14 @@ node {
 
     stage('Deploy') {
         sh """
-        cp ${env.WORKSPACE}/build/libs/demo-1.0.jar ~/servers
+        jar_name=demo-1.0.jar
+        cp ${env.WORKSPACE}/build/libs/${jar_name} ~/servers
         cd ~/servers
-        BUILD_ID=DONTKILLME nohup java -jar demo-0.0.1.jar &
+        if [ \$(pgrep -f ${jar_name} | wc -l) -gt 0 ]; then
+            pkill -9 -f ${jar_name}
+            echo "stop application"
+        fi
+        BUILD_ID=DONTKILLME nohup java -jar ${jar_name} &
         """
     }
 }
