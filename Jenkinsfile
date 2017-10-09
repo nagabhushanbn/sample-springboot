@@ -6,7 +6,6 @@ node {
         archiveArtifacts artifacts: 'build/libs/*.jar', fingerprint: true
     }
 
-
     stage('Deploy') {
         def jar_name = "demo-1.0.jar"
         sh """
