@@ -1,4 +1,4 @@
-package io.github.swim2sun.domain;
+package com.altimetrik.sample.domain;
 
 public class User {
     private String name;
