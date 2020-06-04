@@ -12,7 +12,7 @@ node {
 
         ssh ciuser@18.212.181.247 'ls /servers'
 
-        ssh ciuser@18.212.181.247 'nohup java -jar /servers/${jar_name} &'
+        ssh ciuser@18.212.181.247 'nohup java -jar /servers/${jar_name} > output.txt&&'
         """
     }
 }
