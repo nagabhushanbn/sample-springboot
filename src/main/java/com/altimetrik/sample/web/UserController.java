@@ -5,12 +5,12 @@ import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
 @RestController
-@RequestMapping("/user")
+@RequestMapping("/")
 public class UserController {
 
-    @RequestMapping("/find")
-    public User find() {
-        return new User("Milo","foobar@gmail.com");
+    @RequestMapping("hello")
+    public String find() {
+        return "Altimetrik Lassa";
     }
 
 }
