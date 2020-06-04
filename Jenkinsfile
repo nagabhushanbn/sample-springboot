@@ -13,7 +13,6 @@ node {
 
         ssh ciuser@18.212.181.247 'if [ \$(pgrep -f ${jar_name} | wc -l) -gt 0 ]; then
             pkill -9 -f ${jar_name}
-            echo "stop application"
         fi'
 
         ssh ciuser@18.212.181.247 'ls /servers'
