@@ -10,7 +10,7 @@ public class UserController {
 
     @RequestMapping("hello")
     public String find() {
-        return "Divakar";
+        return "Nagabhushan";
     }
 
 }
