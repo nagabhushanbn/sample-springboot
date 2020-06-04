@@ -9,7 +9,7 @@ node {
         def jar_name = "demo-1.0.jar"
         sh label: '', script:
         '''     scp ${WORKSPACE}/build/libs/'''+jar_name+''' ciuser@18.212.181.247:/servers
-                ssh ciuser@18.212.181.247 "if [ $(pgrep -f '''+jar_name+''' | wc -l) -gt 0 ];
+                ssh ciuser@18.212.181.247 "if [ \$(pgrep -f '''+jar_name+''' | wc -l) -gt 0 ];
                                             then
                                             pkill -9 -f '''+jar_name+'''
                                             fi"
