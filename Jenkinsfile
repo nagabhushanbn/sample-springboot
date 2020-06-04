@@ -1,6 +1,5 @@
 node {
     checkout scm
-    export BUILD_ID=dontKillMe
     stage('Build') {
         sh './gradlew assemble'
         archiveArtifacts artifacts: 'build/libs/*.jar', fingerprint: true
